@@ -12,6 +12,13 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 let unique = function(array) {
     // Your code here 
+    let newArray = []
+    array.filter(function (num) {
+        if (!newArray.includes(num)) {
+            return newArray.push(num)
+        }
+    })
+    return newArray
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

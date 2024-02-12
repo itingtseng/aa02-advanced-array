@@ -15,8 +15,19 @@ console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 */
 
 let maxWithReduce = function(nums) {
-    // Your code here 
+  // Your code here 
+  let currentmax = -Infinity
+  let max = nums.reduce(function (first, num) {
+    if (num > currentmax) {
+      currentmax = num
+    }
+    return currentmax
+  })
+  return max
 };
+
+console.log(maxWithReduce([4, 6, 3, 5, 42, 4])); // 42
+console.log(maxWithReduce([-2, -3, -7, 3])); // 3
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
